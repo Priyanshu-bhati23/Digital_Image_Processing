@@ -1,0 +1,11 @@
+clear all
+close all
+clc
+info=imfinfo('pr2.png')
+IFN=info.Filename;
+IFS=info.FileSize;
+IF=info.Format;
+IW=info.Width;
+IH=info.Height;
+IB=info.BitDepth;
+IC=info.ColorType;

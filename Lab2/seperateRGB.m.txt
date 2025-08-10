@@ -1,0 +1,42 @@
+clear all
+close all
+clc
+I=imread('pr2.png')
+
+figure
+subplot(221)
+imshow(I)
+title('\bf\fontsize{10} Original Image')
+
+Red=I;
+Red(:,:,2)=0;
+Red(:,:,3)=0;
+
+
+Green=I;
+Green(:,:,1)=0;
+Green(:,:,3)=0;
+
+Blue=I;
+Blue(:,:,1)=0;
+Blue(:,:,2)=0;
+
+
+
+
+subplot(222)
+imshow(Red)
+title('\bf\fontsize{10} Red Image')
+
+
+
+subplot(223)
+imshow(Green)
+title('\bf\fontsize{10} Green Image')
+
+
+
+subplot(224)
+imshow(Blue)
+title('\bf\fontsize{10} Blue Image')
+

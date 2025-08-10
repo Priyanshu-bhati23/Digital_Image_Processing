@@ -1,0 +1,32 @@
+clear all
+close all
+clc
+I=imread('pr2.png')
+
+figure
+subplot(221)
+imshow(I)
+title('\bf\fontsize{10} Original Image')
+
+R=I(:,:,1);
+G=I(:,:,2);
+B=I(:,:,3);
+
+
+subplot(222)
+imshow(R)
+title('\bf\fontsize{10} Red Chanenl Gray Scale')
+
+
+
+subplot(223)
+imshow(G)
+title('\bf\fontsize{10} Green Chanenl Gray Scale')
+
+
+
+subplot(224)
+imshow(B)
+title('\bf\fontsize{10} Red Chanenl Gray Scale')
+
+

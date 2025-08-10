@@ -1,0 +1,41 @@
+clear all
+close all
+clc
+
+I=imread("pr2.png")
+figure
+subplot(331)
+imshow(I)
+title('\bf\fontsize{5} Original Image')
+
+
+%Resized image
+ls=imresize(I,[130,110]) %250-->130 ROWS 250-->110 COLUMNS
+%by a factor ls=imresize(I,0.75)
+subplot(332)
+imshow(ls)
+title('\bf\fontsize{5} Resized Image')
+
+
+
+%nearest interpolation
+subplot(333)
+ls2=imresize(I,1.5,'nearest')
+imshow(ls2)
+title('\bf\fontsize{5} nearest Interpolation')
+
+
+%billinear interpolation
+subplot(334)
+ls3=imresize(I,1.5,'bilinear')
+imshow(ls3)
+title('\bf\fontsize{5} billinear Interpolation')
+
+
+
+%billinear interpolation
+subplot(335)
+ls4=imresize(I,1.5,'bicubic')
+imshow(ls4)
+title('\bf\fontsize{5} bicubic Interpolation')
+
